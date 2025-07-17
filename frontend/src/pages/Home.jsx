@@ -26,7 +26,7 @@ function Home() {
 
   const fetchExpenses = async () => {
     try {
-      const response = await fetch("http://localhost:4000/api/expenses", {
+      const response = await fetch("https://expresence-tracker-mern.vercel.app/api/expenses", {
         headers: { 'Authorization': localStorage.getItem('token') }
       });
       const data = await response.json();
@@ -41,7 +41,7 @@ function Home() {
 
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`http://localhost:4000/api/expenses/${id}`, {
+      const response = await fetch(`https://expresence-tracker-mern.vercel.app/api/expenses/${id}`, {
         method: "DELETE",
         headers: { 'Authorization': localStorage.getItem('token') }
       });
