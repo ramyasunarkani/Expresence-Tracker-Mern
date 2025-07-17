@@ -27,7 +27,7 @@ function Login() {
             return handleError('email and password are required')
         }
         try {
-            const url = `http://localhost:4000/api/login`;
+            const url = `https://expresence-tracker-mern.vercel.app/api/login`;
             const response = await fetch(url, {
                 method: "POST",
                 headers: {
