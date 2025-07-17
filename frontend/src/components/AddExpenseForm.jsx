@@ -31,8 +31,8 @@ function AddExpenseForm({ existingExpense, onAdded, onClose }) {
     e.preventDefault();
     try {
       const url = existingExpense
-        ? `https://expresence-tracker-mern.vercel.app/expenses/${existingExpense._id}`
-        : "https://expresence-tracker-mern.vercel.app/expenses/add";
+        ? `https://expresence-tracker-mern.vercel.app/api/expenses/${existingExpense._id}`
+        : "https://expresence-tracker-mern.vercel.app/api/expenses/add";
       const method = existingExpense ? "PUT" : "POST";
 
       const response = await fetch(url, {
