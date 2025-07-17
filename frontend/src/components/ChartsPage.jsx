@@ -15,7 +15,7 @@ function ChartsPage() {
 
   const fetchTransactions = async () => {
     try {
-      const response = await fetch("http://localhost:4000/api/expenses", {
+      const response = await fetch("https://expresence-tracker-mern.vercel.app/api/expenses", {
         headers: { 'Authorization': localStorage.getItem('token') }
       });
       const data = await response.json();
